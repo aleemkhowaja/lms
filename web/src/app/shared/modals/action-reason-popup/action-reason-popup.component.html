@@ -1,0 +1,16 @@
+<form [formGroup]="form" dir="rtl">
+  <h6 style="text-align: right">سبب {{action}}</h6>
+  <div class="form-group">
+    <label for="reason"></label>
+    <textarea dir="rtl" class="form-control" id="reason" cols="50" rows="5" [formControlName]="'reason'"
+              maxlength="1000"></textarea>
+  </div>
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-outline-danger" [disabled]="form.invalid" (click)="confirm()">
+        تأكيد
+      </button>
+    </div>
+    <div class="col-md-10"></div>
+  </div>
+</form>

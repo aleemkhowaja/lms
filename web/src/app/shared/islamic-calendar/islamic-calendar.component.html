@@ -1,0 +1,10 @@
+<div class="input-group">
+    <input class="form-control" placeholder="iYYYY-iM-iD"
+           name="islamicDp" ngbDatepicker [(ngModel)]="model" [ngModelOptions]="{standalone: true}"  (ngModelChange)="emitIslamicDate($event)"
+           #d="ngbDatepicker"
+            >
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                type="button"></button>
+    </div>
+</div>

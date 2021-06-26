@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: sfdCairo, "sfdCairo", sans-serif !important;
+}
+
+
+
+/*------------------------------ dropdown multi select ---------------------------------------------------------------*/
+.custom-ng-multiselect-dropdown .dropdown-btn {
+  width: 43px !important;
+  vertical-align: baseline !important;
+  background-color: #fff !important;
+  color: #fff !important;
+  border-color: #808080 !important;
+  border-radius: 0 .25rem .25rem 0 !important;
+  right: 0 !important;
+}
+
+.custom-ng-multiselect-dropdown .dropdown-btn:hover {
+  opacity: 0.5 !important;
+}
+
+.custom-ng-multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
+  color: #fff !important;
+  border-color: #808080 transparent !important;
+}
+
+.custom-ng-multiselect-dropdown .dropdown-list {
+  width: max-content !important;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90, 0.7);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 1);
+}

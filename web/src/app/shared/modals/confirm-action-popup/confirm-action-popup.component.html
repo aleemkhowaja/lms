@@ -1,0 +1,18 @@
+<h5>
+  هل أنت متأكد من {{ data.action }} <span style="font-weight: 900;">{{ data.itemName }}</span> ؟
+</h5>
+
+<br>
+
+<div class="row">
+
+  <div style="margin: auto;">
+    <button class="btn btn-danger mr-2" (click)="cancel()">
+      لا
+    </button>
+    <button class="btn btn-success" (click)="confirm()">
+      نعم
+    </button>
+  </div>
+
+</div>

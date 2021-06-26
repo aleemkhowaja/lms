@@ -1,0 +1,24 @@
+<div class="form-group form-inline">
+
+  <div class="input-group">
+
+    <ng-multiselect-dropdown class="custom-ng-multiselect-dropdown"
+                             [placeholder]="'1'"
+                             [settings]="dropdownSettings"
+                             [data]="filters"
+                             [(ngModel)]="selectedFilters"
+                             (onSelect)="updateSelectedFilters()"
+                             (onDeSelect)="updateSelectedFilters()"
+                             (onSelectAll)="updateSelectedFilters()"
+                             (onDeSelectAll)="updateSelectedFilters()"
+                             [disabled]="isDisabled"
+    >
+    </ng-multiselect-dropdown>
+
+    <label for="search"></label>
+    <input id="search" class="form-control" autocomplete="off" style="width: 400px; border-radius: 5px 0 0 5px;"
+           type="text" name="searchTerm" placeholder="البحث" [(ngModel)]="searchTerm" (input)="updateSearchTerm()">
+
+  </div>
+
+</div>

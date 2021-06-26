@@ -1,0 +1,62 @@
+<div class="main-header">
+  <div class="logo">
+    <img src="{{logoSrc}}" style="width: 125px; height: 85px;" alt="">
+  </div>
+
+  <div class="menu-toggle" style="margin: 0;" (click)="toggleSidebar()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="dropdown" [display]="'static'" ngbDropdown #systemsDropdown="ngbDropdown">
+    <button class="btn text-muted dropdown-toggle mr-3" id="systemsDropdown" (click)="systemsDropdown.open()">
+      دليل الخدمات
+    </button>
+    <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu aria-labelledby="systemsDropdown">
+      <div [ngClass]="{'col-md': isMobile(), 'menu-icon-grid': !isMobile()}" style="text-align: right;">
+        <a ngbDropdownItem *ngFor="let app of getApplications()" [href]="app.url">
+          <i [ngClass]="app.icon"></i>
+          {{ app.name }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin: auto"></div>
+
+  <div class="header-part-right">
+    <i fullScreenWindow class="i-Full-Screen header-icon d-none d-sm-inline-block" role="button"></i>
+    <div ngbDropdown class="d-sm-inline-block">
+      <i ngbDropdownToggle class="i-Information text-muted header-icon" role="button"></i>
+      <div ngbDropdownMenu class="notification-dropdown rtl-ps-none" style="right:0; left: 0;">
+        <div class="menu-icon-grid" style="text-align: center; width: 60px; padding: 0;">
+          <a><i class="i-Men"></i> دليل الأشخاص</a>
+        </div>
+      </div>
+    </div>
+
+    <div ngbDropdown class="d-none">
+      <div class="badge-top-container">
+        <span class="badge badge-primary">0</span>
+        <i ngbDropdownToggle class="i-Bell text-muted header-icon" role="button"></i>
+      </div>
+      <div ngbDropdownMenu class="notification-dropdown rtl-ps-none" perfectScrollbar>
+
+      </div>
+    </div>
+
+    <div ngbDropdown class="user col align-self-end">
+      <img src="{{avatarSrc}}" id="userDropdown" ngbDropdownToggle alt="">
+
+      <div ngbDropdownMenu aria-labelledby="userDropdown" class="header-account-dropdown"
+           style="text-align: right; right: -79px;">
+
+        <button class="dropdown-item" style="background-color: #c3325f; color: #fff;" (click)="signOut()">خروج
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>

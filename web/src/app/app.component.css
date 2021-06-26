@@ -1,0 +1,32 @@
+
+@font-face {
+    font-family: sfdCairo;
+    src:url("../assets/styles/fonts/Cairo-Regular.ttf") format('truetype');
+}
+@font-face {
+    font-family: SamArab;
+    src:url("#{../assets/styles/fonts//SamArb.ttf") format('truetype');
+}
+@font-face {
+    font-family: Luxury;
+    src:url("../assets/styles/fonts/Luxury.ttf") format('truetype');
+}
+@font-face {
+    font-family: stc;
+    src:url("../assets/styles/fonts/stc.ttf") format('truetype');
+}
+@font-face {
+    font-family: jaz-light;
+    src:url("../assets/styles/fonts/jaz-light.ttf") format('truetype');
+}
+
+body{
+    background-color:#f3f2f1;
+    font-family: sfdCairo,stc,SamArab, Tahoma, sfdCairo;
+    font-size: 13px;
+
+    margin: 0 auto;
+
+
+}
+

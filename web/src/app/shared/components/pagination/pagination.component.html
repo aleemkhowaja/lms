@@ -1,0 +1,23 @@
+<div class="d-flex" *ngIf="listSize > 0">
+  <div>
+    <ngb-pagination [collectionSize]="listSize" [maxSize]="maxSize" [(page)]="page" [pageSize]="pageSize"
+                    [boundaryLinks]="true" [ellipses]="true" (pageChange)="pageChanged()"></ngb-pagination>
+  </div>
+  <div>
+    <label for="ongoing-courses-pagination"></label>
+    <select class="custom-select" id="ongoing-courses-pagination" style="width: auto" [(ngModel)]="pageSize"
+            (ngModelChange)="pageSizeChanged()">
+      <option [ngValue]="5">عرض 5 عناصر</option>
+      <option [ngValue]="10">عرض 10 عناصر</option>
+      <option [ngValue]="20">عرض 20 عنصر</option>
+      <option [ngValue]="50">عرض 50 عنصر</option>
+      <option [ngValue]="listSize">الكل</option>
+    </select>
+  </div>
+</div>
+
+<div style="text-align: center;" *ngIf="listSize == 0">
+  <br>
+  <h5>{{ emptyListMessage }}</h5>
+  <br>
+</div>
